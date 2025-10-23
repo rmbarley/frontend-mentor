@@ -135,7 +135,7 @@
     gap: 1rem;
   }
 
-  h2 {
+  h1 {
     font-size: var(--fs-large);
     line-height: var(--lh-large);
     letter-spacing: var(--ls-large);
