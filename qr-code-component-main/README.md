@@ -16,12 +16,13 @@ This is a solution to the [QR code component challenge on Frontend Mentor](https
 
 ### Screenshot
 
-![](./screenshot.jpg)
+<img width="1297" height="964" alt="image" src="https://github.com/user-attachments/assets/570a7b5e-ea19-4119-b624-4898334d8296" />
+
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- [Solution URL](https://your-solution-url.com)
+- [Live Site](https://rmbarley.github.io/frontend-mentor/qr-code-component-main/)
 
 ## My process
 
@@ -33,11 +34,11 @@ This is a solution to the [QR code component challenge on Frontend Mentor](https
 
 ### What I learned
 
-Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge.
+I practiced self-hosting fonts due to GDPR issues with the Google Fonts CDN. I also practiced using logical CSS properties.
 
 
 ## Author
 
-- Website - [Add your name here](https://www.your-site.com)
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
+- Website - [Ryan Barley](https://www.ryanbarley.com)
+- Frontend Mentor - [@rmbarley](https://www.frontendmentor.io/profile/rmbarley)
 
