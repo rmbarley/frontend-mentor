@@ -1,0 +1,193 @@
+@font-face {
+  font-family: "Figtree";
+  src: local("Figtree ExtraBold"), local("Figtree-ExtraBold"),
+    url("/assets/fonts/static/Figtree-ExtraBold.ttf") format("truetype");
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Figtree";
+  src: local("Figtree Medium"), local("Figtree-Medium"),
+    url("/assets/fonts/static/Figtree-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@layer reset {
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+
+  /* https://kilianvalkhof.com/2022/css-html/your-css-reset-needs-text-size-adjust-probably/ */
+  html {
+    -moz-text-size-adjust: none;
+    -webkit-text-size-adjust: none;
+    text-size-adjust: none;
+  }
+
+  body,
+  h1,
+  h2,
+  h3,
+  h4,
+  p,
+  figure,
+  blockquote,
+  dl,
+  dd {
+    margin: 0;
+  }
+
+  /* https://www.scottohara.me/blog/2019/01/12/lists-and-safari.html */
+  [role="list"] {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  body {
+    min-block-size: 100vh;
+    line-height: 1.6;
+  }
+
+  h1,
+  h2,
+  h3,
+  button,
+  input,
+  label {
+    line-height: 1.1;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    text-wrap: balance;
+  }
+
+  p,
+  li {
+    text-wrap: pretty;
+  }
+
+  img,
+  picture {
+    max-inline-size: 100%;
+    display: block;
+  }
+
+  input,
+  button,
+  textarea,
+  select {
+    font: inherit;
+  }
+}
+
+@layer base {
+  :root {
+    --clr-accent: hsl(47 88 63);
+    --clr-neutral-500: hsl(0 0 42);
+    --clr-neutral-950: hsl(0 0 7);
+
+    --clr-white: hsl(0 0 100);
+
+    --space-300: 1.5rem;
+    --space-150: 0.75rem;
+    --space-100: 0.5rem;
+    --space-80: 0.25rem;
+
+    --ff-regular: "Figtree", system-ui, sans-serif;
+    --fs-200: clamp(0.75rem, 2vw, 0.875rem);
+    --fs-400: clamp(0.875rem, 2.5vw, 1rem);
+    --fs-900: clamp(1.25rem, 4vw, 1.5rem); 
+
+    --lh-400: 150%;
+    --ls-400: 0px;
+  }
+
+  body {
+    font-family: var(--ff-regular);
+    font-size: var(--fs-400);
+    line-height: var(--lh-400);
+    letter-spacing: var(--ls-400);
+    color: var(--clr-neutral-950);
+    background-color: var(--clr-accent);
+  }
+
+  main {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    block-size: 100vh;
+    padding: var(--space-300);
+  }
+
+  article {
+    max-inline-size: 384px;
+    max-block-size: 522px;
+    display: grid;
+    gap: var(--space-300);
+    padding: var(--space-300);
+    background-color: var(--clr-white);
+    border-radius: 20px;
+    box-shadow: 8px 8px hsl(0 0 0);
+
+    div {
+      display: grid;
+      gap: var(--space-150);
+    }
+  }
+
+    .article__image {
+      object-fit: cover;
+      height: "200px";
+      width: 100%;
+    }
+
+  .article__tag {
+    padding: var(--space-80) var(--space-150);
+    width: fit-content;
+    font-size: var(--fs-200);
+    font-weight: bold;
+    background-color: var(--clr-accent);
+  }
+
+  .article__timestamp {
+    font-size: var(--fs-200);
+  }
+
+  .article__content {
+    color: var(--clr-neutral-500);
+  }
+
+  a,
+  h1 {
+    font-size: var(--fs-900);
+    text-decoration: none;
+    color: inherit;
+    line-height: inherit;
+  }
+
+  a:hover,
+  a:focus-visible {
+    color: var(--clr-accent);
+  }
+
+  footer {
+    display: flex;
+    align-items: center;
+    gap: var(--space-150);
+
+    p {
+      font-weight: bold;
+      font-size: 0.875rem;
+    }
+  }
+}
