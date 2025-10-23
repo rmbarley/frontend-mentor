@@ -1,0 +1,150 @@
+@font-face {
+  font-family: "Outfit";
+  src: local("Outfit"), local("Outfit Regular"),
+    url("assets/fonts/outfit.ttf") format("truetype");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@layer reset {
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+
+  /* https://kilianvalkhof.com/2022/css-html/your-css-reset-needs-text-size-adjust-probably/ */
+  html {
+    -moz-text-size-adjust: none;
+    -webkit-text-size-adjust: none;
+    text-size-adjust: none;
+  }
+
+  body,
+  h1,
+  h2,
+  h3,
+  h4,
+  p,
+  figure,
+  blockquote,
+  dl,
+  dd {
+    margin: 0;
+  }
+
+  /* https://www.scottohara.me/blog/2019/01/12/lists-and-safari.html */
+  [role="list"] {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  body {
+    min-block-size: 100vh;
+    line-height: 1.6;
+  }
+
+  h1,
+  h2,
+  h3,
+  button,
+  input,
+  label {
+    line-height: 1.1;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    text-wrap: balance;
+  }
+
+  p,
+  li {
+    text-wrap: pretty;
+  }
+
+  img,
+  picture {
+    max-inline-size: 100%;
+    display: block;
+  }
+
+  input,
+  button,
+  textarea,
+  select {
+    font: inherit;
+  }
+}
+
+@layer base {
+  :root {
+    --clr-neutral-300: hsl(212 45 89);
+    --clr-neutral-500: hsl(216 15 48);
+    --clr-neutral-900: hsl(218 44 22);
+
+    --clr-white: hsl(0 0 100);
+
+    --space-lg: 2.5rem;
+    --space-md: 1.5rem;
+    --space-sm: 1rem;
+
+    --ff-regular: "Outfit", system-ui, sans-serif;
+    --fs-regular: 15px;
+    --lh-regular: 1.2;
+    --ls-regular: 0.2px;
+
+    --fs-large: 22px;
+    --lh-large: 1.4;
+    --ls-large: 0px;
+  }
+
+  body {
+    font-family: var(--ff-regular);
+    font-size: var(--fs-regular);
+    color: var(--clr-neutral-900);
+    background-color: var(--clr-neutral-300);
+  }
+
+  section {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    block-size: 100vh;
+  }
+
+  section > div {
+    inline-size: 320px;
+    block-size: 499px;
+    display: grid;
+    gap: 1.5rem;
+    padding: 1rem;
+    padding-block-end: 2.5rem;
+    background-color: var(--clr-white);
+    text-align: center;
+    border-radius: 20px;
+    box-shadow: 0px 25px 25px hsl(0 0 0 / 0.0477);
+  }
+
+  .text-flow {
+    display: grid;
+    gap: 1rem;
+  }
+
+  h2 {
+    font-size: var(--fs-large);
+    line-height: var(--lh-large);
+    letter-spacing: var(--ls-large);
+  }
+
+  p {
+    font-size: var(--fs-regular);
+    line-height: var(--lh-regular);
+    letter-spacing: var(--ls-regular);
+    color: var(--clr-neutral-500);
+  }
+}
